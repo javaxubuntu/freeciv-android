@@ -47,11 +47,11 @@ def apply_user_agent_change(ua):
 
 features.set_applier('civsync.ua', apply_user_agent_change)
 
-version = 2600
+version = '2600/beta1'
 if osutil.is_desktop:
-    features.set('civsync.ua', 'CivSyncDesktop/%d' % version)
+    features.set('civsync.ua', 'CivSyncDesktop/%s' % version)
 else:
-    features.set('civsync.ua', 'CivSyncAndroid/%d' % version)
+    features.set('civsync.ua', 'CivSyncAndroid/%s' % version)
 features.add_feature('civsync.enable', False, type=bool)
 features.add_feature('civsync.sid', None, safe=True)
 

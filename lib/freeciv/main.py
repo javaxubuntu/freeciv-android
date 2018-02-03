@@ -216,7 +216,7 @@ def setup_android_version():
 def setup_game_version():
     code = features.get('civsync.ua').split('/')[1]
     a, b, c, d = map(int, code)
-    version = '%d.%d.%d' % (a, b, c*10 + d)
+    version = '%d.%d.%d-%s' % (a, b, c*10 + d, features.get('civsync.ua').split('/')[2])
     print 'Freeciv for Android', version
     features.set('app.version', version)
 
